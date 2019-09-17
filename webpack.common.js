@@ -1,8 +1,14 @@
-const path = require('path');
-const webpack = require('webpack');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+
+const htmlWebpackPlugin = new HtmlWebPackPlugin({
+  template: './dist/index.html',
+  filename: './index.html'
+});
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+  },
   module: {
     rules: [
       {
@@ -23,9 +29,10 @@ module.exports = {
   },
   resolve: { extensions: ['*', '.js', '.jsx', '.css', '.scss'] },
   output: {
-    path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
+    path: `${__dirname}/dist`,
+    publicPath: '/',
     filename: 'bundle.js',
+    chunkFilename: '[name].bundle.js',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [htmlWebpackPlugin]
 };
