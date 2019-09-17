@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode development --open",
+    "build": "webpack --mode production",
     "prettier:check": "prettier --check \"./src/**/*.js\"",
     "prettier:fix": "prettier --write \"./src/**/*.js\"",
     "eslint:check": "node_modules/eslint/bin/eslint.js \"src/**/*.js\"",
