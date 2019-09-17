@@ -1,0 +1,86 @@
+{
+  "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "plugin:react/recommended"],
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly",
+      "window": true,
+      "document": true,
+      "localStorage": true,
+      "FormData": true,
+      "FileReader": true,
+      "Blob": true,
+      "navigator": true
+  },
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react",
+      "prettier"
+  ],
+  "rules": {
+      "prettier/prettier": [
+          "error",
+          {
+            "trailingComma": "es5",
+            "tabWidth": 2,
+            "semi": true,
+            "singleQuote": true,
+            "endOfLine": "lf"
+          }
+      ],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      // "no-console": 1,
+      // "no-debugger": 1,
+      // "no-var": 1,
+      // "semi": [1, "always"],
+      // "no-trailing-spaces": 0,
+      // "eol-last": 0,
+      // "no-underscore-dangle": 0,
+      // "no-alert": 0,
+      // "no-lone-blocks": 0,
+      // "jsx-quotes": 1,
+      // "react/display-name": [ 1, {"ignoreTranspilerName": false }],
+      // "react/forbid-prop-types": [1, {"forbid": ["any"]}],
+      // "react/jsx-boolean-value": 0,
+      // "react/jsx-closing-bracket-location": 0,
+      // "react/jsx-curly-spacing": 1,
+      // "react/jsx-indent-props": 0,
+      // "react/jsx-key": 1,
+      // "react/jsx-max-props-per-line": 0,
+      // "react/jsx-no-bind": 0,
+      // "react/jsx-no-duplicate-props": 1,
+      // "react/jsx-no-literals": 0,
+      // "react/jsx-no-undef": 1,
+      // "react/jsx-pascal-case": 1,
+      // "react/jsx-sort-prop-types": 0,
+      // "react/jsx-sort-props": 0,
+      // "react/jsx-uses-react": 1,
+      // "react/jsx-uses-vars": 1,
+      // "react/no-danger": 1,
+      // "react/no-did-mount-set-state": 1,
+      // "react/no-did-update-set-state": 1,
+      // "react/no-direct-mutation-state": 1,
+      // "react/no-multi-comp": 1,
+      // "react/no-set-state": 0,
+      // "react/no-unknown-property": 1,
+      // "react/prefer-es6-class": 1,
+      // "react/prop-types": 1,
+      // "react/react-in-jsx-scope": 1,
+      // "react/require-extension": 1,
+      // "react/self-closing-comp": 1,
+      // "react/sort-comp": 1,
+      // "react/jsx-wrap-multilines": 1 
+  }
+}
